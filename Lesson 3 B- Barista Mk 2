@@ -1,0 +1,28 @@
+'''
+Tasks
+1- Create a variable named "Price" and assign an integer (everything costs the same)
+2- Robot asks, and remembers, how many coffees you'd like
+3- Robot gives you the total cost of your coffees
+'''
+
+print("Hello! Welcome to our coffee shop!")
+
+name = input("What's your name?: ")
+
+print("Hello " + name + ", thank you for coming in today.\n")
+
+menu = ("Black coffee, Capachino, Latte- ")
+
+order = input(name + ", what would you like from our menu today? Here's what we're serving-\n" + menu)
+price = 3
+
+quantity = input("Ok, how many " + order + "'s would you like?: ")
+
+#"price * quantity" doesn't work, it just prints out whatever number I give for the quantity 3 times
+#That's because any data taken from the input function is a string, so I need to change it it an int somehow
+
+total = price * int(quantity)
+
+#"typeerror" means ther's a problem with the 'type' of data you're trying to use
+#total starts as an int, so using the same method as quantity to switch it to a string is the way to go.
+print("\nThank you " + name + ", your " + quantity + " " + order + "'s will be ready in just a minute. The cost comes to £" + str(total))
